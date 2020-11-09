@@ -11,8 +11,8 @@ spec:
     app: traefik
   ports:
     - name: http
-      port: 30021
-      targetPort: 80
+      port: 80
+      targetPort: 30021
     - name: dashboard
-      port: 30042
-      targetPort: 8080
+      port: 8080
+      targetPort: 30042
