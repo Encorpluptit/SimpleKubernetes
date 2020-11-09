@@ -10,9 +10,13 @@ spec:
   selector:
     app: traefik
   ports:
-    - name: http
-      port: 80
-      targetPort: 30021
-    - name: dashboard
-      port: 8080
-      targetPort: 30042
+    - port: 80
+      name: http
+      nodePort: 30021
+      targetPort: 80
+      protocol: TCP
+    - port: 8080
+      name: admin-dashboard
+      nodePort: 30042
+      targetPort: 8080
+      protocol: TCP
